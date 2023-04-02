@@ -12,6 +12,7 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { IdeasComponent } from './components/ideas/ideas.component';
 import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
 import { HighlightTextDirective } from './directives/highlight-text.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,10 @@ import { HighlightTextDirective } from './directives/highlight-text.directive';
     WeatherComponent,
     IdeasComponent,
     WeatherDetailsComponent,
-    HighlightTextDirective
+    HighlightTextDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

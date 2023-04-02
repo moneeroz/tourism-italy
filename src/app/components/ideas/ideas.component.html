@@ -1,1 +1,101 @@
-<p>ideas works!</p>
+<form [formGroup]="ideaForm" (ngSubmit)="onSubmit()">
+  <div class="form-floating mb-3">
+    <input
+      formControlName="name"
+      type="text"
+      class="form-control"
+      placeholder="Enter your name here"
+    />
+    <label>Name</label>
+  </div>
+  <div>
+    <span *ngIf="name!.touched && name!.errors?.['required']">
+      Please enter your name</span
+    >
+
+    <span *ngIf="name!.dirty && name!.errors?.['minlength']">
+      The name field must be at least 2 characters</span
+    >
+
+    <span *ngIf="name!.dirty && name!.errors?.['prohibitedWords']">
+      Your name can't contain the words "tourist" or "nothing"</span
+    >
+  </div>
+
+  <div class="form-floating mb-3">
+    <input
+      formControlName="age"
+      type="number"
+      class="form-control"
+      placeholder="Enter your age here"
+    />
+    <label>Age</label>
+  </div>
+  <div>
+    <span *ngIf="age!.touched && age!.errors?.['required']">
+      Please enter your age</span
+    >
+  </div>
+
+  <div class="form-floatin mb-3">
+    <input
+      formControlName="email"
+      type="email"
+      class="form-control"
+      placeholder="exapmle@gmail.com"
+    />
+    <label>Email</label>
+  </div>
+  <div>
+    <span *ngIf="email!.touched && email!.errors?.['required']">
+      Please enter your email</span
+    >
+
+    <span *ngIf="email!.dirty && email!.errors?.['minlength']">
+      Please enter a valid email address</span
+    >
+  </div>
+
+  <div class="form-floating mb-3">
+    <select class="form-select" formControlName="city">
+      <option selected>Please select a city</option>
+      <option value="{{ cities }}" *ngFor="let city of cities">
+        {{ city }}
+      </option>
+    </select>
+    <label>City</label>
+  </div>
+  <div>
+    <span *ngIf="city!.touched && city!.errors?.['required']">
+      Please select a city</span
+    >
+  </div>
+
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      formControlName="idea"
+      placeholder="Leave tour idea here"
+      style="height: 100px"
+    ></textarea>
+    <label>Tourism idea</label>
+  </div>
+  <div>
+    <span *ngIf="idea!.touched && idea!.errors?.['required']">
+      Please enter a breif description about your idea</span
+    >
+
+    <span *ngIf="idea!.dirty && idea!.errors?.['minlength']">
+      Your description must be at least 100 characters</span
+    >
+
+    <span *ngIf="idea!.dirty && idea!.errors?.['prohibitedWords']">
+      Your idea description can't contain the word "nothing"</span
+    >
+  </div>
+  <div class="mb-3">
+    <button [disabled]="ideaForm.invalid" type="submit" class="btn btn-primary">
+      Submit idea
+    </button>
+  </div>
+</form>
