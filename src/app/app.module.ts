@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { IdeasComponent } from './components/ideas/ideas.component';
+import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
+import { HighlightTextDirective } from './directives/highlight-text.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { IdeasComponent } from './components/ideas/ideas.component';
     FooterComponent,
     CitiesComponent,
     WeatherComponent,
-    IdeasComponent
+    IdeasComponent,
+    WeatherDetailsComponent,
+    HighlightTextDirective
   ],
   imports: [
     BrowserModule,

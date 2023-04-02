@@ -1,11 +1,14 @@
 <div *ngFor="let city of cities">
   <div class="card text-bg-dark mb-3 w-75 mx-auto">
     <div class="card-body">
-      <a routerLink="/listings/{{ city.name }}" class="card-link card-title">{{
-        city.name
-      }}</a>
-      <p class="card-text" *ngFor="let cityaAttraction of cities">
-        {{ cityaAttraction.attractions }}
+      <a
+        [routerLink]="['/weather-detalis', city.name]"
+        class="card-link card-title"
+        [ngClass]="{ 'text-success': citiesColor === false }"
+        >{{ city.name }}</a
+      >
+      <p class="card-text">
+        {{ city.attractions }}
       </p>
     </div>
   </div>

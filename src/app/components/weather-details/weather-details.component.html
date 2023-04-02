@@ -1,0 +1,41 @@
+<!-- Weather Table -->
+<div>
+  <table class="table table-hover">
+    <thead>
+      <tr class="text-center">
+        <th colspan="2">Spring</th>
+        <th colspan="2">Summer</th>
+        <th colspan="2">Fall</th>
+        <th colspan="2">Winter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Spring Morning</td>
+        <td>Spring Night</td>
+        <td>Summer Morning</td>
+        <td>Summer Night</td>
+        <td>Fall Morning</td>
+        <td>Fall Night</td>
+        <td>Winter Morning</td>
+        <td>Winter Night</td>
+      </tr>
+      <tr>
+        <td>{{ springM | number }} °C</td>
+        <td>{{ springN | number }} °C</td>
+        <td>{{ summerM | number }} °C</td>
+        <td>{{ summerN | number }} °C</td>
+        <td>{{ fallM | number }} °C</td>
+        <td>{{ fallN | number }} °C</td>
+        <td>{{ winterM | number }} °C</td>
+        <td>{{ winterN | number }} °C</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <span appHighlightText>
+    Tourists love to visit {{ name }} between {{ visitFrom }} and {{ visitTo }}
+  </span>
+</div>

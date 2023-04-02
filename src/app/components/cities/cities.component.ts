@@ -9,10 +9,21 @@ import { CitiesService } from 'src/app/services/cities.service';
 })
 export class CitiesComponent implements OnInit {
   cities!: Icity[];
+  citiesColor!: boolean;
 
   constructor(private citiesService: CitiesService) {}
 
   ngOnInit(): void {
     this.cities = this.citiesService.getCities();
+    this.citiesColor = this.colorit();
+  }
+
+  colorit() {
+    for (let i = 0; i < this.cities.length; i++) {
+      if (this.cities[i].attractions.length < 3) {
+        return false;
+      }
+    }
+    return true;
   }
 }
