@@ -14,25 +14,29 @@ export class IdeasComponent {
 
   constructor(
     private cityNamesService: CityNamesService,
-    formBuilder: FormBuilder,
+    formBuilder: FormBuilder
   ) {
     this.cities = this.cityNamesService.getCityNames();
 
     this.ideaForm = formBuilder.group({
       name: [
         '',
-        Validators.required,
-        Validators.minLength(2),
-        prohibitedWordsValidator(/tourist|nothing/gi),
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(2),
+          prohibitedWordsValidator(/tourist|nothing/gi),
+        ]),
       ],
       age: ['', Validators.required],
       email: ['', Validators.required, Validators.email],
       city: ['', Validators.required],
       idea: [
         '',
-        Validators.required,
-        Validators.minLength(100),
-        prohibitedWordsValidator(/tourist/gi),
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(100),
+          prohibitedWordsValidator(/nothing/gi),
+        ]),
       ],
     });
   }

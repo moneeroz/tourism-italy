@@ -8,7 +8,8 @@ import { Iweather } from '../interfaces/iweather';
 export class CityNamesService {
   // cityWeatherArray!: Iweather[];
   // cityNamesArray!: string[];
-  cityNames!: string[];
+  cityNames: string[] = [];
+
   constructor(private weatherService: WeatherService) {}
 
   // getNames() {
@@ -23,7 +24,7 @@ export class CityNamesService {
   getCityNames(): string[] {
     this.weatherService
       .getWeather()
-      .forEach((city) => this.cityNames?.push(city.name));
+      .forEach((city) => this.cityNames.push(city.name));
 
     return this.cityNames;
   }
