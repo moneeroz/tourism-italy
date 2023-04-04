@@ -17,7 +17,7 @@ const routes: Routes = [
     path: 'weather/:name/:springM/:springN/:summerM/:summerN/:fallM/:fallN/:winterM/:winterN/:visitFrom/:visitTo',
     component: WeatherDetailsComponent,
   },
-  { path: 'attractions', component: CityAttractionsComponent },
+  { path: 'cities/:name', component: CityAttractionsComponent },
 ];
 
 @NgModule({

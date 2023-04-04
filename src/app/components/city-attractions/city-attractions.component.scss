@@ -5,36 +5,45 @@
 }
 
 .city {
-  --radius: 80px;
+  --radius: 160px;
 
   width: 50px;
   aspect-ratio: 1;
   background-color: aquamarine;
   border-radius: 50%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
 
   transform-origin: center;
-  animation: orbit 45s linear infinite;
+  animation: orbit 55s linear infinite;
 }
 
 .attraction {
-  --size: 25px;
+  --size: 80px;
 
   position: absolute;
-  top: calc(var(--size) / 2);
-  left: calc(var(--size) / 2);
+  // top: calc(var(--size) / 2);
+  // left: calc(var(--size) / 2);
 
-  width: var(--size);
-  aspect-ratio: 1;
-
-  background-color: burlywood;
+  // background-color: burlywood;
   border-radius: 50%;
 
   transform: translate(
     calc(cos(var(--angle)) * var(--radius)),
     calc(sin(var(--angle)) * var(--radius))
   );
+
+  img {
+    border-radius: 50%;
+    width: var(--size);
+    aspect-ratio: 1;
+
+    animation: turn-around 30s linear infinite;
+  }
 }
 
 $total-attractions: 8;
@@ -47,5 +56,10 @@ $total-attractions: 8;
 @keyframes orbit {
   100% {
     rotate: -1turn;
+  }
+}
+@keyframes turn-around {
+  100% {
+    rotate: 1turn;
   }
 }
