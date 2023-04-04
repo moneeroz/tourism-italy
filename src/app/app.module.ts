@@ -13,6 +13,7 @@ import { IdeasComponent } from './components/ideas/ideas.component';
 import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
 import { HighlightTextDirective } from './directives/highlight-text.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CityAttractionsComponent } from './components/city-attractions/city-attractions.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IdeasComponent,
     WeatherDetailsComponent,
     HighlightTextDirective,
+    CityAttractionsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

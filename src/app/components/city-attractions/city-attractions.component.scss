@@ -1,0 +1,51 @@
+.body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.city {
+  --radius: 80px;
+
+  width: 50px;
+  aspect-ratio: 1;
+  background-color: aquamarine;
+  border-radius: 50%;
+
+  position: relative;
+
+  transform-origin: center;
+  animation: orbit 45s linear infinite;
+}
+
+.attraction {
+  --size: 25px;
+
+  position: absolute;
+  top: calc(var(--size) / 2);
+  left: calc(var(--size) / 2);
+
+  width: var(--size);
+  aspect-ratio: 1;
+
+  background-color: burlywood;
+  border-radius: 50%;
+
+  transform: translate(
+    calc(cos(var(--angle)) * var(--radius)),
+    calc(sin(var(--angle)) * var(--radius))
+  );
+}
+
+$total-attractions: 8;
+@for $attraction from 0 through ($total-attractions - 1) {
+  .attraction:nth-of-type(#{$attraction + 1}) {
+    --angle: #{$attraction} * 360deg / #{$total-attractions};
+  }
+}
+
+@keyframes orbit {
+  100% {
+    rotate: -1turn;
+  }
+}

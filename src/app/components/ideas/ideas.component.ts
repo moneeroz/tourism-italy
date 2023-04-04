@@ -9,12 +9,12 @@ import { CityNamesService } from 'src/app/services/city-names.service';
   styleUrls: ['./ideas.component.scss'],
 })
 export class IdeasComponent {
-  cities!: string[];
+  cities: string[] = [];
   ideaForm;
 
   constructor(
     private cityNamesService: CityNamesService,
-    formBuilder: FormBuilder
+    formBuilder: FormBuilder,
   ) {
     this.cities = this.cityNamesService.getCityNames();
 

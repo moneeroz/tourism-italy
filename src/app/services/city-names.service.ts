@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { WeatherService } from './weather.service';
-import { Iweather } from '../interfaces/iweather';
+// import { Iweather } from '../interfaces/iweather';
 
 @Injectable({
   providedIn: 'root',

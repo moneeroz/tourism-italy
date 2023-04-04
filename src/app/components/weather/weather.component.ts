@@ -8,7 +8,7 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./weather.component.scss'],
 })
 export class WeatherComponent implements OnInit {
-  @Input() weatherData!: Iweather[];
+  @Input() weatherData: Iweather[] = [];
 
   constructor(private weatherService: WeatherService) {}
 

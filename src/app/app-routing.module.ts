@@ -5,6 +5,7 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { IdeasComponent } from './components/ideas/ideas.component';
+import { CityAttractionsComponent } from './components/city-attractions/city-attractions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
     path: 'weather/:name/:springM/:springN/:summerM/:summerN/:fallM/:fallN/:winterM/:winterN/:visitFrom/:visitTo',
     component: WeatherDetailsComponent,
   },
+  { path: 'attractions', component: CityAttractionsComponent },
 ];
 
 @NgModule({

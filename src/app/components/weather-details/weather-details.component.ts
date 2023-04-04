@@ -8,7 +8,7 @@ import { Iweather } from 'src/app/interfaces/iweather';
   styleUrls: ['./weather-details.component.scss'],
 })
 export class WeatherDetailsComponent {
-  @Input() cityWeatherData!: Iweather;
+  @Input() cityWeatherData?: Iweather;
   name = this.activatedRoute.snapshot.paramMap.get('name');
   springM = this.activatedRoute.snapshot.paramMap.get('springM');
   springN = this.activatedRoute.snapshot.paramMap.get('springN');
