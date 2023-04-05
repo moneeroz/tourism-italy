@@ -1,15 +1,18 @@
 <div *ngFor="let city of cities">
-  <div class="card text-bg-dark mb-3 w-75 mx-auto">
-    <div class="card-body">
+  <div class="card mb-3 d-grid col-md-8 col-lg-6 mx-auto">
+    <div class="card-header">
       <a
         [routerLink]="['/cities', city.name]"
-        class="card-link card-title"
+        class="card-link card-title h5"
         [ngClass]="{ 'text-success': citiesColor === false }"
         >{{ city.name }}</a
       >
-      <p class="card-text">
-        {{ city.attractions }}
-      </p>
     </div>
+    <ul
+      class="list-group list-group-flush"
+      *ngFor="let attraction of city.attractions"
+    >
+      <li class="list-group-item">{{ attraction }}</li>
+    </ul>
   </div>
 </div>
