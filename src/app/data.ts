@@ -5,15 +5,42 @@ import { Iweather } from './interfaces/iweather';
 const citiesInfo: Icity[] = [
   {
     name: 'Milan',
-    attractions: ['attraction 1', 'attraction 2', 'attraction 3'],
+    attractions: [
+      'Milan Cathedral',
+      'Duomo- Rooftops',
+      'Galleria Vittorio Emanuele II',
+      "Gallerie d'Italia",
+      'Monumental Cemetery',
+      'Navigli Canal',
+      'piazza-del-duomo',
+      'San Siro Stadium',
+    ],
   },
   {
     name: 'Rome',
-    attractions: ['attraction 1', 'attraction 2', 'attraction 3'],
+    attractions: [
+      'colosseum',
+      'Florence Cathedral',
+      'Pantheon Temple',
+      'Saint Peters Square',
+      'Temple of Saturn',
+      'Altar of the Fatherland',
+      'Tower of Pisa',
+      'Trevi Fountain',
+    ],
   },
   {
     name: 'Venice',
-    attractions: ['attraction 1', 'attraction 2', 'attraction 3'],
+    attractions: [
+      'Accademia Gallary',
+      'Basilica San Marco',
+      'Burano Island',
+      'Campanile Saint Marco',
+      'Canal Grande',
+      "Doge's Palace",
+      'Carnival Mask-Making Class',
+      'Rialto Bridge',
+    ],
   },
 ];
 
@@ -76,7 +103,7 @@ const cityAttractions: Iattraction[] = [
   },
   {
     name: 'Rome',
-    desc: "The centuries-old buildings and bridges, the quiet canals and cobblestone alleyways, the labyrinth of eye-catching islands—it doesn’t get dreamier than Venice. And while the capital of the Veneto is undoubtedly a stunner, it’s also a very real city. The Grand Canal and Piazza San Marco are the centre of tourist activity, and the surrounding winding streets are filled with stylish cafes and gelaterias, souvenir shops and one-off boutiques, as well as gorgeous Renaissance palaces and Gothic churches. Once you’ve ticked off the must-see landmarks (don’t miss the Campanile and Gallerie dell'Accademia), get to know the lesser known neighbourhoods like Cannaregio, Dorsoduro, and Castello where locals crowd lowkey trattorias for afternoon aperitivo.",
+    desc: 'All roads lead to Rome, so they say. Or maybe it should be all interests. Food lovers can spend a lifetime sampling the city’s pasta—impossibly buttery cacio e pepe, rich and meaty carbonara. Art fanatics can tour masterpiece after masterpiece by the likes of Michelangelo and Raphael. And history buffs can explore an absurd amount of ancient sites, from the Pantheon to the Colosseum to the Trevi Fountain. But just when you think you have Rome figured out, it surprises you. Just look at its nightlife, which rivals any European capital with its up-all-night energy and legendary clubbing. And even if your bar-crawl days are behind you, it’s worth joining locals in the Roman tradition of an aperitivo (pre-dinner drink) to toast this eternal city.',
     imgs: [
       '../assets/img/rome/the-altar-of-the-fatherland.jpg',
       '../assets/img/rome/colosseum.jpg',

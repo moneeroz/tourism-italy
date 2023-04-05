@@ -11,6 +11,8 @@ import { AttractionsService } from 'src/app/services/attractions.service';
 export class CityAttractionsComponent implements OnInit {
   citiesAttractions: Iattraction[] = [];
   attractions: string[] = [];
+  cityName: string = '';
+  cityDescription: string = '';
 
   constructor(
     private attractionsService: AttractionsService,
@@ -25,8 +27,10 @@ export class CityAttractionsComponent implements OnInit {
         for (const img of city.imgs) {
           this.attractions.push(img);
         }
+        this.cityName = city.name;
+        this.cityDescription = city.desc;
       }
     }
-    console.log(this.attractions);
+    // console.log(this.attractions);
   }
 }

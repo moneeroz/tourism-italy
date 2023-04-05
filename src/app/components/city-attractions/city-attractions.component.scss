@@ -1,5 +1,5 @@
-.body {
-  min-height: 100vh;
+.main {
+  min-height: 60vh;
   display: grid;
   place-items: center;
 }
@@ -7,7 +7,7 @@
 .city {
   --radius: 160px;
 
-  width: 50px;
+  width: 60px;
   aspect-ratio: 1;
   background-color: aquamarine;
   border-radius: 50%;
@@ -20,6 +20,10 @@
 
   transform-origin: center;
   animation: orbit 55s linear infinite;
+
+  p {
+    padding-top: 12px;
+  }
 }
 
 .attraction {
