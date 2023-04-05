@@ -1,4 +1,8 @@
-<form [formGroup]="ideaForm" (ngSubmit)="onSubmit()">
+<form
+  [formGroup]="ideaForm"
+  (ngSubmit)="onSubmit()"
+  class="d-grid col-md-10 col-lg-8 mx-auto"
+>
   <div class="form-floating mb-3">
     <input
       formControlName="name"
@@ -37,7 +41,7 @@
     >
   </div>
 
-  <div class="form-floatin mb-3">
+  <div class="form-floating mb-3">
     <input
       formControlName="email"
       type="email"
