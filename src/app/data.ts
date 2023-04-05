@@ -76,13 +76,31 @@ const cityAttractions: Iattraction[] = [
   },
   {
     name: 'Rome',
-    desc: '',
-    imgs: ['', '', '', '', '', '', '', ''],
+    desc: "The centuries-old buildings and bridges, the quiet canals and cobblestone alleyways, the labyrinth of eye-catching islands—it doesn’t get dreamier than Venice. And while the capital of the Veneto is undoubtedly a stunner, it’s also a very real city. The Grand Canal and Piazza San Marco are the centre of tourist activity, and the surrounding winding streets are filled with stylish cafes and gelaterias, souvenir shops and one-off boutiques, as well as gorgeous Renaissance palaces and Gothic churches. Once you’ve ticked off the must-see landmarks (don’t miss the Campanile and Gallerie dell'Accademia), get to know the lesser known neighbourhoods like Cannaregio, Dorsoduro, and Castello where locals crowd lowkey trattorias for afternoon aperitivo.",
+    imgs: [
+      '../assets/img/rome/the-altar-of-the-fatherland.jpg',
+      '../assets/img/rome/colosseum.jpg',
+      '../assets/img/rome/florence-cathedral.jpg',
+      '../assets/img/rome/pantheon-temple.jpg',
+      '../assets/img/rome/saint-peters-square.jpg',
+      '../assets/img/rome/temple-of-saturn.jpg',
+      '../assets/img/rome/tower-of-pisa.jpg',
+      '../assets/img/rome/trevi-fountain.jpg',
+    ],
   },
   {
     name: 'Venice',
-    desc: '',
-    imgs: ['', '', '', '', '', '', '', ''],
+    desc: "The centuries-old buildings and bridges, the quiet canals and cobblestone alleyways, the labyrinth of eye-catching islands—it doesn’t get dreamier than Venice. And while the capital of the Veneto is undoubtedly a stunner, it’s also a very real city. The Grand Canal and Piazza San Marco are the centre of tourist activity, and the surrounding winding streets are filled with stylish cafes and gelaterias, souvenir shops and one-off boutiques, as well as gorgeous Renaissance palaces and Gothic churches. Once you’ve ticked off the must-see landmarks (don’t miss the Campanile and Gallerie dell'Accademia), get to know the lesser known neighbourhoods like Cannaregio, Dorsoduro, and Castello where locals crowd lowkey trattorias for afternoon aperitivo.",
+    imgs: [
+      '../assets/img/venice/canal-grande.jpg',
+      '../assets/img/venice/accademia-gallary.jpg',
+      '../assets/img/venice/basilica-san-marco.jpg',
+      '../assets/img/venice/burano.jpg',
+      '../assets/img/venice/campanile-st-mark.jpg',
+      '../assets/img/venice/doges-palace.jpg',
+      '../assets/img/venice/mask-carnival.jpg',
+      '../assets/img/venice/rialto-bridge.jpg',
+    ],
   },
 ];
 
