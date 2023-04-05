@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'ideas', component: IdeasComponent },
   {
-    path: 'weather/:name/:springM/:springN/:summerM/:summerN/:fallM/:fallN/:winterM/:winterN/:visitFrom/:visitTo',
+    path: 'weather/:name/:springM/:springN/:summerM/:summerN/:fallM/:fallN/:winterM/:winterN/:visitFrom/:visitTo/:weatherImg',
     component: WeatherDetailsComponent,
   },
   { path: 'cities/:name', component: CityAttractionsComponent },

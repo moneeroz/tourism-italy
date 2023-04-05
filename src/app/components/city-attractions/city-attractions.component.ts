@@ -31,6 +31,7 @@ export class CityAttractionsComponent implements OnInit {
         this.cityDescription = city.desc;
       }
     }
+
     // console.log(this.attractions);
   }
 }

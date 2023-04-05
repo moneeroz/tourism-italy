@@ -1,6 +1,6 @@
 <div *ngFor="let weather of weatherData">
-  <div class="card mb-3">
-    <img src="..." class="card-img-top" alt="..." />
+  <div class="card mb-3 d-grid col-md-10 col-lg-9 mx-auto">
+    <img src="{{ weather.weatherImg }}" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ weather.name }}</h5>
 
@@ -17,7 +17,8 @@
           weather.winterM,
           weather.winterN,
           weather.visitFrom,
-          weather.visitTo
+          weather.visitTo,
+          weather.weatherImg
         ]"
         class="btn btn-primary"
         >view weather history</a

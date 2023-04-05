@@ -10,4 +10,5 @@ export interface Iweather {
   fallN: number;
   visitFrom: string;
   visitTo: string;
+  weatherImg: string;
 }

@@ -57,6 +57,7 @@ const citiesWeather: Iweather[] = [
     fallN: 14,
     visitFrom: 'May',
     visitTo: 'August',
+    weatherImg: '../assets/img/weather/milan-weather.jpg',
   },
   {
     name: 'Rome',
@@ -70,6 +71,7 @@ const citiesWeather: Iweather[] = [
     fallN: 12,
     visitFrom: 'June',
     visitTo: 'September',
+    weatherImg: '../assets/img/weather/rome-weather.jpg',
   },
   {
     name: 'Venice',
@@ -83,13 +85,14 @@ const citiesWeather: Iweather[] = [
     fallN: 15,
     visitFrom: 'June',
     visitTo: 'August',
+    weatherImg: '../assets/img/weather/venice-weather.jpg',
   },
 ];
 
 const cityAttractions: Iattraction[] = [
   {
     name: 'Milan',
-    desc: "If you skip Milan in favor of Italy's more popular cities like Rome, Florence, and Venice, you're missing out: this underrated gem is the country's fashion, architecture, and design capital and should be on every traveller's must-see list. So where to start? There's the iconic Duomo di Milano, the world's largest—and perhaps most stunning—Gothic cathedral; the exquisite mosaics and glass vaults of the Scala Opera House and Galleria Vittorio Emanuelle II; the impressive museums like Pinacoteca di Brera and the contemporary MAXXI. And of course, plenty of boutiques to check out if you're looking to fill an extra suitcase (head to Corso Venezia, Corso Buenos Aires, and Via Montenapoleone for the city's best shopping).",
+    desc: "If you skip Milan in favor of Italy's more popular cities like Rome, Florence, and Venice, you're missing out: this underrated gem is the country's fashion, architecture, and design capital and should be on every traveller's must-see list. So where to start? There's the iconic Duomo di Milano, the world's largest and perhaps most stunning Gothic cathedral; the exquisite mosaics and glass vaults of the Scala Opera House and Galleria Vittorio Emanuelle II; the impressive museums like Pinacoteca di Brera and the contemporary MAXXI. And of course, plenty of boutiques to check out if you're looking to fill an extra suitcase (head to Corso Venezia, Corso Buenos Aires, and Via Montenapoleone for the city's best shopping).",
     imgs: [
       '../assets/img/milan/duomo-di-milano.jpg',
       '../assets/img/milan/duomo-rooftops.jpg',
