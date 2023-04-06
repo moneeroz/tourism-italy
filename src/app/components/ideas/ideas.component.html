@@ -62,8 +62,8 @@
 
   <div class="form-floating mb-3">
     <select class="form-select" formControlName="city">
-      <option selected>Please select a city</option>
-      <option value="{{ cities }}" *ngFor="let city of cities">
+      <!-- <option selected>Please select a city</option> -->
+      <option value="{{ city }}" *ngFor="let city of cities">
         {{ city }}
       </option>
     </select>

@@ -28,7 +28,7 @@ export class IdeasComponent {
         ]),
       ],
       age: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       city: ['', Validators.required],
       idea: [
         '',
