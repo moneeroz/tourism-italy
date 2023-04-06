@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Iweather } from 'src/app/interfaces/iweather';
+import { OpenWeatherApiService } from 'src/app/services/open-weather-api.service';
 
 @Component({
   selector: 'app-weather-details',
@@ -8,7 +9,8 @@ import { Iweather } from 'src/app/interfaces/iweather';
   styleUrls: ['./weather-details.component.scss'],
 })
 export class WeatherDetailsComponent {
-  @Input() cityWeatherData?: Iweather;
+  // @Input() cityWeatherData?: Iweather;
+
   name = this.activatedRoute.snapshot.paramMap.get('name');
   springM = this.activatedRoute.snapshot.paramMap.get('springM');
   springN = this.activatedRoute.snapshot.paramMap.get('springN');
@@ -20,6 +22,8 @@ export class WeatherDetailsComponent {
   winterN = this.activatedRoute.snapshot.paramMap.get('winterN');
   visitFrom = this.activatedRoute.snapshot.paramMap.get('visitFrom');
   visitTo = this.activatedRoute.snapshot.paramMap.get('visitTo');
+
+  currentCity: any = this.name;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 }

@@ -1,7 +1,14 @@
+<div class="my-5 text-center">
+  <p class="lead">
+    Please Fill out the following form and we will get back to you if your idea
+    is interesting
+  </p>
+</div>
+
 <form
   [formGroup]="ideaForm"
   (ngSubmit)="onSubmit()"
-  class="d-grid col-md-10 col-lg-8 mx-auto"
+  class="d-grid col-md-10 col-lg-8 mx-auto py-5"
 >
   <div class="form-floating mb-3">
     <input
@@ -12,7 +19,7 @@
     />
     <label>Name</label>
   </div>
-  <div>
+  <div class="text-danger mb-2">
     <span *ngIf="name!.touched && name!.errors?.['required']">
       Please enter your name</span
     >
@@ -35,7 +42,7 @@
     />
     <label>Age</label>
   </div>
-  <div>
+  <div class="text-danger mb-2">
     <span *ngIf="age!.touched && age!.errors?.['required']">
       Please enter your age</span
     >
@@ -50,7 +57,7 @@
     />
     <label>Email</label>
   </div>
-  <div>
+  <div class="text-danger mb-2">
     <span *ngIf="email!.touched && email!.errors?.['required']">
       Please enter your email</span
     >
@@ -69,7 +76,7 @@
     </select>
     <label>City</label>
   </div>
-  <div>
+  <div class="text-danger mb-2">
     <span *ngIf="city!.touched && city!.errors?.['required']">
       Please select a city</span
     >
@@ -84,12 +91,12 @@
     ></textarea>
     <label>Tourism idea</label>
   </div>
-  <div>
+  <div class="text-danger mb-2">
     <span *ngIf="idea!.touched && idea!.errors?.['required']">
       Please enter a breif description about your idea</span
     >
 
-    <span *ngIf="idea!.dirty && idea!.errors?.['minlength']">
+    <span class="d-block" *ngIf="idea!.dirty && idea!.errors?.['minlength']">
       Your description must be at least 100 characters</span
     >
 
@@ -98,7 +105,7 @@
     >
   </div>
   <div class="mb-3">
-    <button [disabled]="ideaForm.invalid" type="submit" class="btn btn-primary">
+    <button [disabled]="ideaForm.invalid" type="submit" class="btn btn-dark">
       Submit idea
     </button>
   </div>

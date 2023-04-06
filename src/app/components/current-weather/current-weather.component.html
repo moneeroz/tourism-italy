@@ -1,0 +1,53 @@
+<form
+  class="form-floating mb-3 d-grid col-md-10 col-lg-8 mx-auto"
+  #form="ngForm"
+  (submit)="onSubmit()"
+  *ngIf="isSearch"
+>
+  <input type="text" class="form-control" name="city" [(ngModel)]="cityName" />
+  <label>Search city</label>
+</form>
+
+<div class="card d-grid col-md-10 col-lg-8 mx-auto" *ngIf="weatherData">
+  <div class="card-body">
+    <p class="text-center">
+      <i *ngIf="weatherData.main.temp <= 9" class="icofont-snow bigIcon"></i>
+    </p>
+    <p class="text-center">
+      <i *ngIf="weatherData.main.temp > 9" class="icofont-sun bigIcon"></i>
+    </p>
+    <h5 class="card-title text-center">{{ weatherData.name }}</h5>
+    <h4 class="card-title text-center my-4 fw-bold">
+      {{ weatherData.main.temp | number : "1.0-0" }} °C
+    </h4>
+    <p class="card-text">
+      current temp: <i class="icofont-sunny-day-temp px-1"></i>
+      {{ weatherData.main.temp | number : "1.0-0" }} °C
+    </p>
+
+    <p class="card-text">
+      feels like: <i class="icofont-snow-temp px-1"></i>
+      {{ weatherData.main.feels_like | number : "1.0-0" }} °C
+    </p>
+
+    <p class="card-text">
+      min temp: <i class="icofont-snow-flake px-1"></i>
+      {{ weatherData.main.temp_min | number : "1.0-0" }} °C
+    </p>
+
+    <p class="card-text">
+      max temp: <i class="icofont-sun px-1"></i>
+      {{ weatherData.main.temp_max | number : "1.0-0" }} °C
+    </p>
+
+    <p class="card-text">
+      humidity: <i class="icofont-thermometer px-1"></i>
+      {{ weatherData.main.humidity }} %
+    </p>
+
+    <p class="card-text">
+      wind: <i class="icofont-wind px-1"></i> {{ weatherData.wind.speed }} km /
+      h
+    </p>
+  </div>
+</div>

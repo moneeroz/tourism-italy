@@ -6,6 +6,7 @@ import { WeatherDetailsComponent } from './components/weather-details/weather-de
 import { CitiesComponent } from './components/cities/cities.component';
 import { IdeasComponent } from './components/ideas/ideas.component';
 import { CityAttractionsComponent } from './components/city-attractions/city-attractions.component';
+import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
     component: WeatherDetailsComponent,
   },
   { path: 'cities/:name', component: CityAttractionsComponent },
+  { path: 'current-weather', component: CurrentWeatherComponent },
 ];
 
 @NgModule({

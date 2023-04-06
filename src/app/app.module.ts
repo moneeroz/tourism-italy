@@ -14,6 +14,8 @@ import { WeatherDetailsComponent } from './components/weather-details/weather-de
 import { HighlightTextDirective } from './directives/highlight-text.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CityAttractionsComponent } from './components/city-attractions/city-attractions.component';
+import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,15 @@ import { CityAttractionsComponent } from './components/city-attractions/city-att
     WeatherDetailsComponent,
     HighlightTextDirective,
     CityAttractionsComponent,
+    CurrentWeatherComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
