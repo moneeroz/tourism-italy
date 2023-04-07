@@ -20,32 +20,28 @@
     <h4 class="card-title text-center my-4 fw-bold">
       {{ weatherData.main.temp | number : "1.0-0" }} °C
     </h4>
-    <p class="card-text">
-      current temp: <i class="icofont-sunny-day-temp px-1"></i>
-      {{ weatherData.main.temp | number : "1.0-0" }} °C
-    </p>
 
-    <p class="card-text">
+    <p class="card-text mb-4">
       feels like: <i class="icofont-snow-temp px-1"></i>
       {{ weatherData.main.feels_like | number : "1.0-0" }} °C
     </p>
 
-    <p class="card-text">
+    <p class="card-text mb-4">
       min temp: <i class="icofont-snow-flake px-1"></i>
       {{ weatherData.main.temp_min | number : "1.0-0" }} °C
     </p>
 
-    <p class="card-text">
+    <p class="card-text mb-4">
       max temp: <i class="icofont-sun px-1"></i>
       {{ weatherData.main.temp_max | number : "1.0-0" }} °C
     </p>
 
-    <p class="card-text">
+    <p class="card-text mb-4">
       humidity: <i class="icofont-thermometer px-1"></i>
       {{ weatherData.main.humidity }} %
     </p>
 
-    <p class="card-text">
+    <p class="card-text mb-3">
       wind: <i class="icofont-wind px-1"></i> {{ weatherData.wind.speed }} km /
       h
     </p>
